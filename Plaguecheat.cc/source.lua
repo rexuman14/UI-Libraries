@@ -831,7 +831,7 @@ else
 	spawn(function()
 		game:GetService("RunService").RenderStepped:Connect(function()
 			local plr = game:GetService('Players').LocalPlayer
-			library.ms =  game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+			library.ms =  "Demonity.cc"
 		end)
 	end)
 end
