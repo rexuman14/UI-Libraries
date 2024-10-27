@@ -29,7 +29,7 @@ local function intersects (p, edge)
 	if t and u and t > 0 and t < 1 and u > 0 then
 		return true
 	end
- 
+
 	return false
 end
 
@@ -439,8 +439,8 @@ function OpenedColor(text,ColourDisplay,Action,def)
 		COLORPALLETE.Visible = false
 
 		pcall(function()
-            Action( Color3.fromRGB(ColourDisplayBIG.ImageColor3.R * 200 ,ColourDisplayBIG.ImageColor3.G * 200 ,ColourDisplayBIG.ImageColor3.B* 200) )
-        end)
+			Action( Color3.fromRGB(ColourDisplayBIG.ImageColor3.R * 200 ,ColourDisplayBIG.ImageColor3.G * 200 ,ColourDisplayBIG.ImageColor3.B* 200) )
+		end)
 
 	end)
 
@@ -620,7 +620,7 @@ WEBSITE.Position = UDim2.new(0.177174687, 0, 0.499190629, 0)
 WEBSITE.Size = UDim2.new(0, 197, 0, 23)
 WEBSITE.ZIndex = 3
 WEBSITE.Font = Enum.Font.ArialBold
-WEBSITE.Text = "NerdsInc.gq" 
+WEBSITE.Text = "license used:  |" 
 WEBSITE.TextColor3 = Color3.fromRGB(199, 199, 199)
 WEBSITE.TextSize = 14.000
 WEBSITE.TextXAlignment = Enum.TextXAlignment.Left
@@ -635,7 +635,7 @@ LABEL2.Position = UDim2.new(0.795508027, 0, 0.455712378, 0)
 LABEL2.Size = UDim2.new(0, 197, 0, 23)
 LABEL2.ZIndex = 3
 LABEL2.Font = Enum.Font.ArialBold
-LABEL2.Text = "Alpha build / âˆž days left"
+LABEL2.Text = "Alpha build"
 LABEL2.TextColor3 = Color3.fromRGB(199, 199, 199)
 LABEL2.TextSize = 14.000
 LABEL2.TextXAlignment = Enum.TextXAlignment.Right
@@ -915,24 +915,24 @@ function library:AddWatermark(Text)
 end
 
 function library:Init(name)
-    for i,v in pairs(Upper:GetChildren()) do
-        if v:IsA('TextButton') then
-            if v.Name == name then
-                TweenService:Create(v , TweenInfo.new(0.26, Enum.EasingStyle.Quad , Enum.EasingDirection.InOut), {TextColor3 = Color3.fromRGB(210, 210, 210)}):Play()	
-            else
-                TweenService:Create(v , TweenInfo.new(0.26, Enum.EasingStyle.Quad , Enum.EasingDirection.InOut), {TextColor3 = Color3.fromRGB(138, 138, 138)}):Play()	
-            end
-        end
-    end
-    for i,v in pairs(limit1:GetChildren()) do
-        if v:IsA('Frame') or v:IsA('ScrollingFrame') then
-            if v.Name == name then
-                v.Visible = true
-            else
-                v.Visible = false
-            end
-        end
-    end
+	for i,v in pairs(Upper:GetChildren()) do
+		if v:IsA('TextButton') then
+			if v.Name == name then
+				TweenService:Create(v , TweenInfo.new(0.26, Enum.EasingStyle.Quad , Enum.EasingDirection.InOut), {TextColor3 = Color3.fromRGB(210, 210, 210)}):Play()	
+			else
+				TweenService:Create(v , TweenInfo.new(0.26, Enum.EasingStyle.Quad , Enum.EasingDirection.InOut), {TextColor3 = Color3.fromRGB(138, 138, 138)}):Play()	
+			end
+		end
+	end
+	for i,v in pairs(limit1:GetChildren()) do
+		if v:IsA('Frame') or v:IsA('ScrollingFrame') then
+			if v.Name == name then
+				v.Visible = true
+			else
+				v.Visible = false
+			end
+		end
+	end
 end
 
 function library:AddWindow(text)
@@ -1324,7 +1324,7 @@ function library:AddWindow(text)
 				PassBox.Text=colador(obj5.Text,Type)
 
 				if PassBox.Text == nil or PassBox.Text == '' then
-   
+
 					if #PassBox.Text <= 5 then
 						obj2:TweenSize(UDim2.new(0,#PassBox.PlaceholderText*10,0,16),'Out','Quint',0.4,true);
 					else
@@ -1366,7 +1366,7 @@ function library:AddWindow(text)
 			UpdateMainSize(nil,true)
 
 		end
- 
+
 		function inside:AddSlider(Text,Max,Min,def,Action)
 			Text = Text or 'Not Defined'
 			Max = Max or 100
@@ -1605,7 +1605,7 @@ function library:AddWindow(text)
 			TextLabel.TextWrapped = true
 			TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 			TextLabel.TextYAlignment = Enum.TextYAlignment.Top
-			
+
 			TextLabel.AutomaticSize = Enum.AutomaticSize.Y
 
 
@@ -2211,7 +2211,7 @@ function library:AddWindow(text)
 			TextLabel.Position = UDim2.new(0, 0, 0, 0)
 			TextLabel.Size = UDim2.new(0,243,0,19)
 			TextLabel.ZIndex = 15
-            TextLabel.Text=Text
+			TextLabel.Text=Text
 			TextLabel.Font = Enum.Font.SourceSansBold
 			TextLabel.TextColor3 = Color3.fromRGB(84, 84, 84)
 			TextLabel.TextSize = 17.000
